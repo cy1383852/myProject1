@@ -23,21 +23,9 @@ app.config(['$routeProvider',function($routeProvider){
 		templateUrl: './discover/html/discover.html',
 		controller: 'discoverCtrl'
 	})
-	.when('/group',{
-		templateUrl: './group/html/group.html',
-		controller: 'groupCtrl'
-	})
 	.otherwise({
 		redirectTo: '/' //重定向
 	});
 }]);
 
 
-app.controller("headerCtrl", function($scope) {
-	$scope.show = function(){
-		nav.style.display = 'block';
-	}
-	$scope.hide = function(){
-		nav.style.display = 'none';
-	}
-});

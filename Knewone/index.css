@@ -20,6 +20,9 @@ body{
 	justify-content: space-around;
 	align-items: center;
 }
+.index-header header>i{
+	margin-left: .5rem;
+}
 .index-header header>a{
 	margin-top: .6rem;
 }
@@ -27,15 +30,15 @@ body{
 	font-size: 14px;
 	color: #fff;
 }
-.nav{
+.index-nav{
 	display: none;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(54,56,58,0.97);
 	position: fixed;
-	z-index: 2;
+	z-index: 100;
 }
-.nav .close-menu{
+.index-nav .close-menu{
 	font-weight: bold;
 	display: block;
 	height: 3.75rem;
@@ -44,7 +47,7 @@ body{
 	text-align: center;
 	line-height: 3.75rem;
 }
-.nav .chaxun{
+.index-nav .chaxun{
 	background-color: #5E6775;
 	width: 100%;
 	height: 3.75rem;
@@ -52,11 +55,11 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 }
-.nav .chaxun>i{
+.index-nav .chaxun>i{
 	color: #AAAAAA;
 	margin: 0 .6rem;
 }
-.nav .chaxun input{
+.index-nav .chaxun input{
 	height: 3rem;
 	width: 80%;
 	border: none;
@@ -64,7 +67,7 @@ body{
 	background-color: #5E6775;
 	color: #FFFFFF;
 }
-.nav ul:nth-of-type(1) li a{
+.index-nav ul:nth-of-type(1) li a{
 	font-size: 14px;
 	font-weight: bold;
 	display: flex;
@@ -74,16 +77,16 @@ body{
 	width: 100%;
 	color: #FFFFFF;
 }
-.nav ul li a>i{
+.index-nav ul li a>i{
 	margin: 0 1.4rem;
 }
-.nav ul:nth-of-type(2){
+.index-nav ul:nth-of-type(2){
 	height: 5.19rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.nav ul:nth-of-type(2) li{
+.index-nav ul:nth-of-type(2) li{
 	width: 16.6%;
 	height: 2.688rem;
 	display: flex;
@@ -92,7 +95,7 @@ body{
 	align-items: center;
 	
 }
-.nav ul:nth-of-type(2) li>a{
+.index-nav ul:nth-of-type(2) li>a{
 	display: flex;
 	width: 100%;
 	height: 100%;
@@ -101,17 +104,17 @@ body{
 	align-items: center;
 	color: #FFFFFF;
 }
-.nav ul:nth-of-type(2) li>a>i{
+.index-nav ul:nth-of-type(2) li>a>i{
 	margin: .4rem 0;
 }
-.nav .login{
+.index-nav .login{
 	margin: .5rem 0;
 	width: 100%;
 	height: 2.5rem;display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.nav .login>span{
+.index-nav .login>span{
 	display: block;
 	width: 70%;
 	height: 2.5rem;
@@ -120,4 +123,109 @@ body{
 	text-align: center;
 	border-radius: 2rem;
 	color: #FFFFFF;
+}
+/*.zhezhao{
+	position: relative;z-index: 5;
+	display: none;
+	background-color: rgba(0,0,0,.5);
+}*/
+.index-login{
+	display: none;
+	position: fixed;
+	z-index: 3;
+	width: 94%;
+	margin: 0 3%;
+	background-color: #F6F6F6;
+	height: 26.875rem;
+	color: #9a9a9a;
+}
+
+.index-login #login-close{
+	display: block;
+	height: 1.875rem;
+	font-size: 1.3rem;
+	text-align: center;
+	line-height: 1.875rem;
+	width: 1.875rem;
+	position: absolute;
+	top: .5rem;
+	right: 0rem;
+}
+.index-login>h2{
+	/*font-size: 1rem;*/
+	font-weight: 100;
+	margin: 1rem 0;
+	text-align: center;
+}
+.index-login .input{
+	width: 100%;
+	height: 7.313rem;
+}
+.index-login .input input{
+	outline: none;
+	border: none;
+	margin-left: 1.5rem;
+	font-weight: bold;
+	color: #9a9a9a;
+}
+.index-login .input>div{
+	height: 2.75rem;
+	line-height: 2.75rem;
+	background-color: #FFFFFF;
+	margin-bottom: .8rem;
+}
+.index-login .login-ifn{
+	width: 100%;
+	display: flex;
+	text-align: left;
+	justify-content: space-between;
+	align-items: center;
+}
+.index-login .login-ifn>p{
+	margin-left: 3rem;
+}
+.index-login .login-ifn>i{
+	color: #8AD3F0;
+	margin-right: 2rem;
+}
+.index-login>section{
+	width: 100%;
+	height: 2.125rem;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+	}
+.index-login>section>p{
+	display: block;
+	width: 13.75rem;
+	height: 2.125rem;
+	line-height: 2.125rem;
+	text-align: center;
+	background-color: #8AD3F0;
+	color: #FFFFFF;
+	border-radius: 1rem;
+	
+}
+.index-login h6{
+	text-align: center;
+	margin: 1rem 0;
+}
+.index-login>p{
+	color: #FFFFFF;
+	text-align: center;
+}
+.index-login>p>span{
+	display: inline-block;
+	height: 2.5rem;
+	width: 2.5rem;
+	text-align: center;
+	line-height: 2.5rem;
+	background-color: #8AD3F0;
+	border-radius: .8rem;
+	margin: 0 .4rem;
+}
+.index-login>h4{
+	text-align: center;
+	color: #8AD3F0;
+	margin: 1.7rem;
 }

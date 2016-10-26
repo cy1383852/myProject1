@@ -13,26 +13,59 @@
         <script src="libs/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body ng-app="myApp">
-
+    	
 		<div class="index-header" >
 			<header ng-controller="headerCtrl">
-				<i class="fa fa-bars" id="header-openmenu" ng-click="show()"></i>
+				<i class="fa fa-bars" id="header-openmenu" ng-click="navShow()"></i>
 				<a><img src="libs/logo.png"/></a>
-				<div class="btns">
+				<div class="btns" ng-click="loginShow()">
 				  <a href="">注册|登录 </a>
 				</div>
 			</header>
 		</div>
-
-		<div class="nav" ng-controller="headerCtrl">
-		    <a class="close-menu" ng-click="hide()">×</a>
+		
+		<!--登录页面-->
+		<div class="index-login" ng-controller="headerCtrl">
+			<span id="login-close" ng-click="loginHide()">
+				×
+			</span>
+			<h2>登录</h2>
+			<div class="input">
+				<div class="myCount">
+				   <input type="text" placeholder="邮件地址或手机号" name="" id="" value="" /> 
+				</div>
+				<div class="myPwd">
+					<input type="password" placeholder="密码" name="" id="" value="" />
+				</div>
+			</div>
+			<div class="login-ifn">
+			  <p><input type="checkbox" checked="checked" name="" id="remember" value="" />&nbsp;&nbsp;<label for="remember">记住我</label> </p> 
+			  <i class="fa fa-question-circle">&nbsp;&nbsp;忘记密码？</i>
+			</div>
+			<section>
+				<p>登录</p>
+			</section>
+			<h6>使用社交账号登录</h6>
+			<p>
+				<span><i class="fa fa-weibo"></i></span>
+				<span><i class="fa fa-qq"></i></span>
+				<span><i class="fa fa-mars-double"></i></span>
+				<span><i class="fa fa-bold"></i></span>
+			</p>
+			<h4>注册KnewOne <i class="fa fa-angle-right"></i></h4>
+			
+		</div>
+		
+		<!--//隐藏的导航-->
+		<div class="index-nav" ng-controller="headerCtrl">
+		    <a class="close-menu" ng-click="navHide()">×</a>
 		    <div class="chaxun">
 		        <i class="fa fa-search"></i>
 		        <input type="text" name="" id="" value="" placeholder="搜索KnewOne"/>
 		    </div>
 		    <ul>
 		        <li>
-		        	<a href="#/" class="index-home" ng-click="hide()">
+		        	<a href="#/" class="index-home" ng-click="navHide()">
 				    	<i class="fa fa-home"></i>首页
 				    	<!--<span style="font-size: 14px;">首页</span>-->
 				    </a>
@@ -44,40 +77,40 @@
 				    </a>
 		        </li>
 		    </ul>
-
+		    
 		    <ul>
 		        <li>
-		        	<a href="#/article" ng-click="hide()">
+		        	<a href="#/article" ng-click="navHide()">
 		        		<i class="fa fa-book"></i>
 		        		<span>文章</span>
 		        	</a>
 		        </li>
 		         <li>
-		        	<a href="#/cp" ng-click="hide()">
+		        	<a href="#/cp" ng-click="navHide()">
 		        		<i class="fa fa-tags"></i>
 		        		<span>产品</span>
 		        	</a>
 		        </li>
 		         <li>
-		        	<a href="#/discover" ng-click="hide()">
+		        	<a href="#/discover" ng-click="navHide()">
 		        		<i class="fa fa-compass"></i>
 		        		<span>发现</span>
 		        	</a>
 		        </li>
 		         <li>
-		        	<a href="#/hd" ng-click="hide()">
+		        	<a href="#/hd" ng-click="navHide()">
 		        		<i class="fa fa-bullhorn"></i>
 		        		<span>活动</span>
 		        	</a>
 		        </li>
 		         <li>
-		        	<a href="#/shop" ng-click="hide()">
+		        	<a href="#/shop" ng-click="navHide()">
 		        		<i class="fa fa-gift"></i>
 		        		<span>商店</span>
 		        	</a>
 		        </li>
 		         <li>
-		        	<a href="#/group" ng-click="hide()">
+		        	<a href="#/xz" ng-click="navHide()">
 		        		<i class="fa fa-tint"></i>
 		        		<span>小组</span>
 		        	</a>
@@ -86,21 +119,21 @@
 		    <div class="login">
 		        <span>注册/登录</span>
 		    </div>
-
-
-
+		    
+		    
+		    
 		</div>
-
-
+		
+		
         <!-- AngularJS中提供了ng-view指令，为了展示路由切换的页面 -->
         <div ng-view></div>
-
+        
     </body>
-    <script src="index.js" type="text/javascript" charset="utf-8"></script>
     <script src="router.js" type="text/javascript" charset="utf-8"></script>
+    <script src="index.js" type="text/javascript" charset="utf-8"></script>
     <script src="article/js/article.js" type="text/javascript" charset="utf-8"></script>
     <script src="home/js/home.js" type="text/javascript" charset="utf-8"></script>
     <script src="shop/js/shop.js" type="text/javascript" charset="utf-8"></script>
+    <!--<script src="gwc/js/gwc.js" charset="utf-8"></script>-->
     <script src="discover/js/discover.js" charset="utf-8"></script>
-    <script src="group/js/group.js" charset="utf-8"></script>
 </html>
