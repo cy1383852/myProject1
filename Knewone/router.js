@@ -19,9 +19,21 @@ app.config(['$routeProvider',function($routeProvider){
 		templateUrl: './shop/html/shop.html',
 		controller: 'shopCtrl'
 	})
+	.when('/group',{
+		templateUrl: './group/html/group.html',
+		controller: 'groupCtrl'
+	})
 	.when('/discover',{
 		templateUrl: './discover/html/discover.html',
 		controller: 'discoverCtrl'
+	})
+	.when('/skipProduct',{
+		templateUrl: './discover/html/skipProduct.html',
+		controller: 'skipProductCtrl'
+	})
+	.when('/goods',{
+		templateUrl: './discover/html/goods.html',
+		controller: 'goodsCtrl'
 	})
 	.otherwise({
 		redirectTo: '/' //重定向

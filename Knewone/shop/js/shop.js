@@ -9,4 +9,5 @@ app.controller("shopCtrl", function ($scope, $css) {
 				scrollTop:0
 			},300)
     }
+    console.log('aaa')
 });

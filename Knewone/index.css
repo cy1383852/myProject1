@@ -132,7 +132,7 @@ body{
 .index-login{
 	display: none;
 	position: fixed;
-	z-index: 3;
+	z-index: 100;
 	width: 94%;
 	margin: 0 3%;
 	background-color: #F6F6F6;
